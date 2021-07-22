@@ -12,7 +12,7 @@ const create = async ({ title, artist, format, price, image, description }) => {
   return db
     .promise()
     .query(
-      "INSERT INTO tableaux (title, artist, format, price, image, description) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
+      "INSERT INTO tableaux (title, artist, format, price, image, description) VALUES (?, ?, ?, ?, ?, ?)",
       [title, artist, format, price, image, description]
     );
 };
